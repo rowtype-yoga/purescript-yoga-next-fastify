@@ -29,7 +29,9 @@
           ]
         },
         "test": {
-          "dependencies": []
+          "dependencies": [
+            "assert"
+          ]
         }
       }
     },
@@ -626,6 +628,7 @@
       }
     },
     "extra_packages": {
+      "http-methods": "6.1.0",
       "yoga-fastify": "0.4.0",
       "yoga-http-api": "0.2.1",
       "yoga-options": "0.1.0"
@@ -674,6 +677,16 @@
         "unsafe-coerce"
       ]
     },
+    "assert": {
+      "type": "registry",
+      "version": "6.0.0",
+      "integrity": "sha256-hCZ1J8/71nQiRwsSV2j7iicppScOegBFZrLI6sPf9F8=",
+      "dependencies": [
+        "console",
+        "effect",
+        "prelude"
+      ]
+    },
     "bifunctors": {
       "type": "registry",
       "version": "6.1.0",
@@ -698,6 +711,15 @@
         "prelude",
         "tuples",
         "unfoldable"
+      ]
+    },
+    "console": {
+      "type": "registry",
+      "version": "6.1.0",
+      "integrity": "sha256-3T5PPz1mATZmV0C4GzkCkpLlCa5xG7u8ZNgnLrrrI1Q=",
+      "dependencies": [
+        "effect",
+        "prelude"
       ]
     },
     "const": {
@@ -943,8 +965,8 @@
     },
     "http-methods": {
       "type": "registry",
-      "version": "6.0.0",
-      "integrity": "sha256-S0UjrJSgwJxEsFHM/pX77dM8V4HfvvDqdHPckQrtxMs=",
+      "version": "6.1.0",
+      "integrity": "sha256-WbjEmCv6rysY/aKwlrcspyzShi5bIQy+AFpDzPMnSP4=",
       "dependencies": [
         "either",
         "prelude",
