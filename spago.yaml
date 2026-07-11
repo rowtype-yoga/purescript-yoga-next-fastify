@@ -22,15 +22,7 @@ workspace:
   packageSet:
     registry: 73.3.0
   extraPackages:
-    http-methods:
-      git: https://github.com/purescript-contrib/purescript-http-methods.git
-      ref: add-http-query-method
-      dependencies:
-        - console
-        - effect
-        - either
-        - prelude
-        - strings
+    http-methods: "6.1.0"
     yoga-fastify: "0.4.0"
     yoga-http-api: "0.2.1"
     yoga-options: "0.1.0"

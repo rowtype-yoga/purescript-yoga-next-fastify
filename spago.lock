@@ -628,17 +628,7 @@
       }
     },
     "extra_packages": {
-      "http-methods": {
-        "git": "https://github.com/purescript-contrib/purescript-http-methods.git",
-        "ref": "add-http-query-method",
-        "dependencies": [
-          "console",
-          "effect",
-          "either",
-          "prelude",
-          "strings"
-        ]
-      },
+      "http-methods": "6.1.0",
       "yoga-fastify": "0.4.0",
       "yoga-http-api": "0.2.1",
       "yoga-options": "0.1.0"
@@ -974,12 +964,10 @@
       ]
     },
     "http-methods": {
-      "type": "git",
-      "url": "https://github.com/purescript-contrib/purescript-http-methods.git",
-      "rev": "a1ffee45eb82a02d272cd407a1a9592be1202df4",
+      "type": "registry",
+      "version": "6.1.0",
+      "integrity": "sha256-WbjEmCv6rysY/aKwlrcspyzShi5bIQy+AFpDzPMnSP4=",
       "dependencies": [
-        "console",
-        "effect",
         "either",
         "prelude",
         "strings"
