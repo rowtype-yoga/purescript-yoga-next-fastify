@@ -1,5 +1,6 @@
 module Yoga.Next.Fastify
-  ( NextApp
+  ( allMethods
+  , NextApp
   , createNextApp
   , nextRequestHandler
   , registerNextHandler
@@ -28,12 +29,13 @@ foreign import nextRequestHandlerImpl :: EffectFn1 NextApp (HttpRequest -> HttpR
 nextRequestHandler :: NextApp -> Effect (HttpRequest -> HttpResponse -> Effect Unit)
 nextRequestHandler = runEffectFn1 nextRequestHandlerImpl
 
+allMethods :: Array String
+allMethods = show <$>
+  [ Method.GET, Method.POST, Method.PUT, Method.DELETE
+  , Method.PATCH, Method.HEAD, Method.OPTIONS, Method.QUERY
+  ]
+
 registerNextHandler :: NextApp -> Fastify -> Effect Unit
 registerNextHandler app server = do
   handler <- nextRequestHandler app
   F.rawRoute allMethods handler server
-  where
-  allMethods = show <$>
-    [ Method.GET, Method.POST, Method.PUT, Method.DELETE
-    , Method.PATCH, Method.HEAD, Method.OPTIONS
-    ]

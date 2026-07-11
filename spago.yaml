@@ -14,10 +14,23 @@ package:
     - http-methods: ">=6.0.0 <7.0.0"
     - prelude: ">=6.0.2 <7.0.0"
     - yoga-fastify: ">=0.3.0 <1.0.0"
+  test:
+    main: Test.Main
+    dependencies:
+      - assert
 workspace:
   packageSet:
     registry: 73.3.0
   extraPackages:
+    http-methods:
+      git: https://github.com/purescript-contrib/purescript-http-methods.git
+      ref: add-http-query-method
+      dependencies:
+        - console
+        - effect
+        - either
+        - prelude
+        - strings
     yoga-fastify: "0.4.0"
     yoga-http-api: "0.2.1"
     yoga-options: "0.1.0"
